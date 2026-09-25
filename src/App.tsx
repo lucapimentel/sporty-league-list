@@ -5,6 +5,7 @@ import { useDebouncedValue } from "./hooks/useDebouncedValue";
 import { useLeagues } from "./hooks/useLeagues";
 import { LeagueFilters } from "./components/LeagueFilters/LeagueFilters";
 import "./index.css"
+import { LeagueList } from "./components/LeagueList/LeagueList";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -29,6 +30,7 @@ function App() {
         allSports={sports}
         onSportChange={setCurrentSport}
         currentSportSelected={currentSport} />
+      <LeagueList searchTerm={debouncedSearchTerm ?? ""} sport={currentSport} />
     </main>
   )
 }
