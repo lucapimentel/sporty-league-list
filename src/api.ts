@@ -2,7 +2,7 @@ const API_BASE_URL = "https://www.thesportsdb.com/api/v1/json/3";
 
 export type League = {
     idLeague: string,
-    strLeage: string,
+    strLeague: string,
     strSport: string,
     strLeagueAlternate?: string | null,
 }
