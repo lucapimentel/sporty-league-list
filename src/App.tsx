@@ -11,7 +11,7 @@ function App() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentSport, setCurrentSport] = useState(ALL_SPORTS);
 
-  const debouncedSearchTerm = useDebouncedValue(searchTerm, 300);
+  const debouncedSearchTerm = useDebouncedValue(searchTerm ?? "", 300);
 
   const { data: leagues = [] } = useLeagues();
 
@@ -25,7 +25,7 @@ function App() {
     <main className="page">
       <PageHeader title="Sports Leagues" />
       <LeagueFilters
-        searchTerm={debouncedSearchTerm ?? ""}
+        searchTerm={searchTerm ?? ""}
         onSearchTextChange={setSearchTerm}
         allSports={sports}
         onSportChange={setCurrentSport}

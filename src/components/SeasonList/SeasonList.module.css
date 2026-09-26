@@ -1,0 +1,13 @@
+.seasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: .75rem;
+    list-style: none;
+    padding: 0
+}
+
+.placeholder {
+    width: 72px;
+    height: 72px;
+    border: 1px dashed var(--velvet-border-strong)
+}

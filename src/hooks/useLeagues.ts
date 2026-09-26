@@ -3,7 +3,7 @@ import { fetchLeagues } from "../api";
 
 export function useLeagues() {
     return useQuery({
-        queryKey: ["league"],
+        queryKey: ["leagues"],
         queryFn: fetchLeagues
     })
 }

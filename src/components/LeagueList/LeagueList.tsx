@@ -5,12 +5,12 @@ import styles from "./LeagueList.module.css"
 import { LeagueCard } from "../LeagueCard/LeagueCard";
 import { Button, Card, EmptyState, Skeleton } from "@lucapimentel/velvet";
 
-interface LeagueListProps {
+interface ILeagueListProps {
     searchTerm: string;
     sport: string;
 }
 
-export function LeagueList({ searchTerm, sport }: LeagueListProps) {
+export function LeagueList({ searchTerm, sport }: ILeagueListProps) {
     const { data: leagues = [], isPending, isError, refetch } = useLeagues();
     const [selectedLeagueId, setSelectedLeagueId] = useState<string | null>(null);
 
