@@ -23,3 +23,6 @@ How to test: npm run test
 - **Code review**: Code review while coding
 - **Written by AI at my request**: The css modules, the component test of te leaguelist.test.tsx
 - **Not delegated**: Coding, Architecture, state management and main design
+
+## App is deployed on Vercel
+- https://sporty-league-list.vercel.app
